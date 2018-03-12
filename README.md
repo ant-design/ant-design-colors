@@ -37,3 +37,8 @@ console.log(presetPalettes);
 }
 */
 ```
+
+## Articles
+
+- [Ant Design Colors](https://ant.design/docs/spec/colors)
+- [Ant Design 色板生成算法演进之路](https://zhuanlan.zhihu.com/p/32422584)
