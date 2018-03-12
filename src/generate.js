@@ -1,4 +1,4 @@
-import Color from 'color';
+import tinycolor from 'tinycolor2';
 
 const hueStep = 2; // 色相阶梯
 const saturationStep = 16; // 饱和度阶梯，浅色部分
@@ -11,10 +11,10 @@ const darkColorCount = 4; // 深色数量，主色下
 function getHue(hsv, i, light) {
   let hue;
   // 根据色相不同，色相转向不同
-  if (hsv.color[0] >= 60 && hsv.color[0] <= 240) {
-    hue = light ? hsv.color[0] - (hueStep * i) : hsv.color[0] + (hueStep * i);
+  if (Math.round(hsv.h) >= 60 && Math.round(hsv.h) <= 240) {
+    hue = light ? Math.round(hsv.h) - (hueStep * i) : Math.round(hsv.h) + (hueStep * i);
   } else {
-    hue = light ? hsv.color[0] + (hueStep * i) : hsv.color[0] - (hueStep * i);
+    hue = light ? Math.round(hsv.h) + (hueStep * i) : Math.round(hsv.h) - (hueStep * i);
   }
   if (hue < 0) {
     hue += 360;
@@ -27,11 +27,11 @@ function getHue(hsv, i, light) {
 function getSaturation(hsv, i, light) {
   let saturation;
   if (light) {
-    saturation = hsv.color[1] - (saturationStep * i);
+    saturation = Math.round(hsv.s * 100) - (saturationStep * i);
   } else if (i === darkColorCount) {
-    saturation = hsv.color[1] + (saturationStep);
+    saturation = Math.round(hsv.s * 100) + (saturationStep);
   } else {
-    saturation = hsv.color[1] + (saturationStep2 * i);
+    saturation = Math.round(hsv.s * 100) + (saturationStep2 * i);
   }
   // 边界值修正
   if (saturation > 100) {
@@ -49,31 +49,31 @@ function getSaturation(hsv, i, light) {
 
 function getValue(hsv, i, light) {
   if (light) {
-    return hsv.color[2] + (brightnessStep1 * i);
+    return Math.round(hsv.v * 100) + (brightnessStep1 * i);
   }
-  return hsv.color[2] - (brightnessStep2 * i);
+  return Math.round(hsv.v * 100) - (brightnessStep2 * i);
 }
 
 export default function generate(color) {
   const patterns = [];
-  const pColor = Color(color);
+  const pColor = tinycolor(color);
   for (let i = lightColorCount; i > 0; i -= 1) {
-    const hsv = pColor.hsv().round();
-    const colorString = Color({
+    const hsv = pColor.toHsv();
+    const colorString = tinycolor({
       h: getHue(hsv, i, true),
       s: getSaturation(hsv, i, true),
       v: getValue(hsv, i, true),
-    }).hex();
+    }).toHexString();
     patterns.push(colorString);
   }
-  patterns.push(pColor.hex());
+  patterns.push(pColor.toHexString());
   for (let i = 1; i <= darkColorCount; i += 1) {
-    const hsv = pColor.hsv().round();
-    const colorString = Color({
+    const hsv = pColor.toHsv();
+    const colorString = tinycolor({
       h: getHue(hsv, i),
       s: getSaturation(hsv, i),
       v: getValue(hsv, i),
-    }).hex();
+    }).toHexString();
     patterns.push(colorString);
   }
   return patterns;

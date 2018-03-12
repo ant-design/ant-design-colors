@@ -1,9 +1,9 @@
 {
   "name": "ant-design-palettes",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Color palettes calculator of Ant Design",
   "main": "lib/index.js",
-  "module": "src/index.js",
+  "module": "es/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/ant-design/ant-design-palettes"
@@ -11,8 +11,6 @@
   "bugs": {
     "url": "https://github.com/ant-design/ant-design-palettes/issues"
   },
-  "main": "lib/index.js",
-  "module": "es/index.js",
   "scripts": {
     "compile": "babel src --out-dir lib",
     "prepublish": "npm run compile",
@@ -21,7 +19,7 @@
   "author": "afc163 <afc163@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "color": "^3.0.0"
+    "tinycolor2": "^1.4.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

@@ -1,4 +1,4 @@
-import { generate, presetPalettes } from './';
+import { generate, presetPalettes } from './src';
 
 const blueColors = [
   '#E6F7FF',
@@ -11,7 +11,7 @@ const blueColors = [
   '#0050B3',
   '#003A8C',
   '#002766',
-];
+].map(color => color.toLowerCase());
 
 test('Generate palettes from a given color', () => {
   expect(generate('#1890ff')).toEqual(blueColors);
