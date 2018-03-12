@@ -1,8 +1,9 @@
 # Ant Design Palettes
 
-[![](https://img.shields.io/travis/ant-design/ant-design-palettes/master.svg?style=flat-square)](https://travis-ci.org/ant-design/ant-design-palettes)  [![Gitter](https://badges.gitter.im/ant-design/ant-design-palettes.svg)](https://gitter.im/ant-design/ant-design-palettes?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![](https://img.shields.io/travis/ant-design/ant-design-palettes/master.svg?style=flat-square)](https://travis-ci.org/ant-design/ant-design-palettes)
+[![npm package](https://img.shields.io/npm/v/ant-design-palettes.svg?style=flat-square)](https://www.npmjs.org/package/ant-design-palettes)
 
-Color palettes calculator of [Ant Design](https://ant.design/docs/spec/colors).
+:art: Color palettes calculator of [Ant Design](https://ant.design/docs/spec/colors).
 
 ![](https://gw.alipayobjects.com/zos/rmsportal/cYDwIQtKOZRavAqKqfNq.png)
 
