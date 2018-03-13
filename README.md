@@ -16,9 +16,10 @@ $ npm install ant-design-palettes --save
 ```js
 import { generate, presetPalettes } from 'ant-design-palettes';
 
+// Generate color palettes by a given color
 const colors = generate('#1890ff');
-console.log(colors);
-// ['#E6F7FF', '#BAE7FF', '#91D5FF', ''#69C0FF', '#40A9FF', '#1890FF', '#096DD9', '#0050B3', '#003A8C', '#002766']
+console.log(colors); // ['#E6F7FF', '#BAE7FF', '#91D5FF', ''#69C0FF', '#40A9FF', '#1890FF', '#096DD9', '#0050B3', '#003A8C', '#002766']
+
 console.log(presetPalettes);
 /*
 {
