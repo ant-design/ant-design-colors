@@ -3,7 +3,6 @@
   "version": "1.1.1",
   "description": "Color palettes calculator of Ant Design",
   "main": "lib/index.js",
-  "module": "src/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/ant-design/ant-design-palettes"
