@@ -25,6 +25,10 @@ function getHue(hsv, i, light) {
 }
 
 function getSaturation(hsv, i, light) {
+  // grey color don't change saturation
+  if (hsv.h === 0 && hsv.s === 0) {
+    return hsv.s;
+  }
   let saturation;
   if (light) {
     saturation = Math.round(hsv.s * 100) - (saturationStep * i);

@@ -13,6 +13,7 @@ const presetPrimaryColors = {
   geekblue: '#2F54EB',
   purple: '#722ED1',
   magenta: '#EB2F96',
+  grey: '#666666',
 };
 
 const presetPalettes = {};
