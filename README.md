@@ -4,8 +4,8 @@
 
 :art: Color palettes calculator of [Ant Design](https://ant.design/docs/spec/colors).
 
-[![CircleCI branch](https://img.shields.io/circleci/project/github/ant-design/ant-design-colors/master.svg?style=flat-square)](https://circleci.com/gh/ant-design/ant-design-colors)
-[![Test coverage][https://img.shields.io/coveralls/ant-design/ant-design-colors.svg?style=flat-square]][https://coveralls.io/r/ant-design/ant-design-colors?branch=master]
+[![Travis](https://img.shields.io/travis/ant-design/ant-design-colors/master.svg?style=flat-square)](https://travis-ci.org/ant-design/ant-design-colors)
+[![Test coverage](https://img.shields.io/coveralls/ant-design/ant-design-colors.svg?style=flat-square)](https://coveralls.io/r/ant-design/ant-design-colors?branch=master)
 [![npm package](https://img.shields.io/npm/v/@ant-design/colors.svg?style=flat-square)](https://www.npmjs.org/package/@ant-design/colors)
 [![NPM downloads](http://img.shields.io/npm/dm/@ant-design/colors.svg?style=flat-square)](http://npmjs.com/@ant-design/colors)
 
