@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ant-design/ant-design-colors"
+    "url": "git+https://github.com/ant-design/ant-design-colors.git"
   },
   "bugs": {
     "url": "https://github.com/ant-design/ant-design-colors/issues"
@@ -32,5 +32,6 @@
     "ts-jest": "^23.10.5",
     "typescript": "^3.2.2",
     "typescript-eslint-parser": "^21.0.2"
-  }
+  },
+  "homepage": "https://github.com/ant-design/ant-design-colors#readme"
 }
