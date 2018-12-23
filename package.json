@@ -13,7 +13,8 @@
   "scripts": {
     "compile": "tsc",
     "prepublishOnly": "npm run compile",
-    "test": "jest"
+    "lint": "eslint .",
+    "test": "npm run lint && jest"
   },
   "author": "afc163 <afc163@gmail.com>",
   "license": "MIT",
@@ -23,8 +24,11 @@
   "devDependencies": {
     "@types/jest": "^23.3.10",
     "@types/tinycolor2": "^1.4.1",
+    "eslint": "^5.11.0",
+    "eslint-plugin-typescript": "^0.14.0",
     "jest": "^23.6.0",
     "ts-jest": "^23.10.5",
-    "typescript": "^3.2.2"
+    "typescript": "^3.2.2",
+    "typescript-eslint-parser": "^21.0.2"
   }
 }

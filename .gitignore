@@ -29,3 +29,4 @@ yarn.lock
 package-lock.json
 /.history
 !jest.config.js
+!.eslintrc.js
