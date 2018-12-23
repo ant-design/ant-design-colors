@@ -14,8 +14,7 @@
     "compile": "tsc",
     "prepublishOnly": "npm run compile",
     "lint": "eslint .",
-    "jest": "jest",
-    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
+    "jest": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "test": "npm run lint && npm run jest"
   },
   "author": "afc163 <afc163@gmail.com>",
