@@ -14,7 +14,8 @@
     "compile": "tsc",
     "prepublishOnly": "npm run compile",
     "lint": "eslint .",
-    "jest": "jest --env=node --colors --coverage test",
+    "jest": "jest",
+    "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls",
     "test": "npm run lint && npm run jest"
   },
   "author": "afc163 <afc163@gmail.com>",
@@ -25,6 +26,7 @@
   "devDependencies": {
     "@types/jest": "^23.3.10",
     "@types/tinycolor2": "^1.4.1",
+    "coveralls": "^3.0.2",
     "eslint": "^5.11.0",
     "eslint-plugin-typescript": "^0.14.0",
     "jest": "^23.6.0",
