@@ -8,13 +8,13 @@ const brightnessStep2 = 15; // 亮度阶梯，深色部分
 const lightColorCount = 5; // 浅色数量，主色上
 const darkColorCount = 4; // 深色数量，主色下
 
-interface hsvObject {
-  h: number,
-  s: number,
-  v: number,
-};
+interface HsvObject {
+  h: number;
+  s: number;
+  v: number;
+}
 
-function getHue(hsv: hsvObject, i: number, light?: boolean) {
+function getHue(hsv: HsvObject, i: number, light?: boolean) {
   let hue;
   // 根据色相不同，色相转向不同
   if (Math.round(hsv.h) >= 60 && Math.round(hsv.h) <= 240) {
@@ -30,7 +30,7 @@ function getHue(hsv: hsvObject, i: number, light?: boolean) {
   return hue;
 }
 
-function getSaturation(hsv: hsvObject, i: number, light?: boolean) {
+function getSaturation(hsv: HsvObject, i: number, light?: boolean) {
   // grey color don't change saturation
   if (hsv.h === 0 && hsv.s === 0) {
     return hsv.s;
@@ -57,7 +57,7 @@ function getSaturation(hsv: hsvObject, i: number, light?: boolean) {
   return saturation;
 }
 
-function getValue(hsv: hsvObject, i: number, light?: boolean) {
+function getValue(hsv: HsvObject, i: number, light?: boolean) {
   if (light) {
     return Math.round(hsv.v * 100) + (brightnessStep1 * i);
   }
