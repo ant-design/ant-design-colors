@@ -1,4 +1,4 @@
-import { generate, presetPalettes } from './src';
+import { generate, presetPalettes } from '../src';
 
 const blueColors = [
   '#E6F7FF',
