@@ -1,8 +1,12 @@
 {
   "name": "@ant-design/colors",
-  "version": "2.0.0",
+  "version": "2.0.3",
   "description": "Color palettes calculator of Ant Design",
   "main": "src/index.js",
+  "module": "src/index.js",
+  "files": [
+    "src"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ant-design/ant-design-colors.git"

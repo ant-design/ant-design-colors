@@ -22,7 +22,7 @@ node_modules/
 .settings
 npm-debug.log
 nohup.out
-*.js
+**/*.js
 /.vscode/
 /coverage
 yarn.lock
