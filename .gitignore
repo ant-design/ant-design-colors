@@ -30,3 +30,4 @@ package-lock.json
 /.history
 !jest.config.js
 !.eslintrc.js
+!.prettierrc.js
