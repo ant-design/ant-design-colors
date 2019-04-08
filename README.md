@@ -13,7 +13,7 @@
 [![DevDependencies](https://img.shields.io/david/dev/ant-design/ant-design-colors.svg?style=flat-square)](https://david-dm.org/ant-design/ant-design-colors?type=dev) [![Greenkeeper badge](https://badges.greenkeeper.io/ant-design/ant-design-colors.svg)](https://greenkeeper.io/)
 </div>
 
-![](https://gw.alipayobjects.com/zos/rmsportal/cYDwIQtKOZRavAqKqfNq.png)
+![](https://user-images.githubusercontent.com/507615/55726820-43e68400-5a43-11e9-8541-b0fc28b78f37.png)
 
 ## Install
 
