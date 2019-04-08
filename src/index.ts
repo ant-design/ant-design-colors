@@ -1,7 +1,7 @@
 import generate from './generate';
 
 export interface PalettesProps {
-  [key: string]: string[];
+  [key: string]: string[] & { primary?: string };
 }
 
 const presetPrimaryColors: {
@@ -26,6 +26,36 @@ const presetPalettes: PalettesProps = {};
 
 Object.keys(presetPrimaryColors).forEach(key => {
   presetPalettes[key] = generate(presetPrimaryColors[key]);
+  presetPalettes[key].primary = presetPalettes[key][6];
 });
 
-export { generate, presetPalettes, presetPrimaryColors };
+const red = presetPalettes.red;
+const volcano = presetPalettes.volcano;
+const gold = presetPalettes.gold;
+const yellow = presetPalettes.yellow;
+const lime = presetPalettes.lime;
+const green = presetPalettes.green;
+const cyan = presetPalettes.cyan;
+const blue = presetPalettes.blue;
+const geekblue = presetPalettes.geekblue;
+const purple = presetPalettes.purple;
+const magenta = presetPalettes.magenta;
+const grey = presetPalettes.grey;
+
+export {
+  generate,
+  presetPalettes,
+  presetPrimaryColors,
+  red,
+  volcano,
+  gold,
+  yellow,
+  lime,
+  green,
+  cyan,
+  blue,
+  geekblue,
+  purple,
+  magenta,
+  grey,
+};

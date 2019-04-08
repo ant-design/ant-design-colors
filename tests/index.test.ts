@@ -1,6 +1,6 @@
 import { generate, presetPalettes } from '../src';
 
-const blueColors = [
+export const blueColors = [
   '#E6F7FF',
   '#BAE7FF',
   '#91D5FF',
@@ -33,5 +33,5 @@ test('should contain preseted palettes', () => {
     'magenta',
     'grey',
   ]);
-  expect(presetPalettes.blue).toEqual(blueColors);
+  expect([...presetPalettes.blue]).toEqual(blueColors);
 });
