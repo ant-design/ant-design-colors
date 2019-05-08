@@ -2,10 +2,10 @@
   "name": "@ant-design/colors",
   "version": "3.0.1",
   "description": "Color palettes calculator of Ant Design",
-  "main": "src/index.js",
-  "module": "src/index.js",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
   "files": [
-    "src"
+    "lib"
   ],
   "repository": {
     "type": "git",
@@ -15,7 +15,7 @@
     "url": "https://github.com/ant-design/ant-design-colors/issues"
   },
   "scripts": {
-    "compile": "tsc",
+    "compile": "gulp",
     "prepublishOnly": "npm run compile",
     "lint": "eslint src --ext .ts",
     "lint:fix": "prettier --write '{src,tests}/**/*.ts'",
@@ -36,6 +36,8 @@
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.2.0",
     "eslint-plugin-prettier": "^3.0.1",
+    "gulp": "^4.0.2",
+    "gulp-typescript": "^5.0.1",
     "jest": "^24.7.1",
     "prettier": "^1.16.4",
     "ts-jest": "^24.0.2",
