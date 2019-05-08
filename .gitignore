@@ -22,13 +22,11 @@ node_modules/
 .settings
 npm-debug.log
 nohup.out
-**/*.js
+src/**/*.js
+tests/**/*.js
 /.vscode/
 /coverage
 yarn.lock
 package-lock.json
 /.history
-!jest.config.js
-!.eslintrc.js
-!.prettierrc.js
 lib
