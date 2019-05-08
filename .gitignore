@@ -31,3 +31,4 @@ package-lock.json
 !jest.config.js
 !.eslintrc.js
 !.prettierrc.js
+lib
