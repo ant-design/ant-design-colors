@@ -15,12 +15,13 @@
     "url": "https://github.com/ant-design/ant-design-colors/issues"
   },
   "scripts": {
+    "tsc": "tsc",
     "compile": "gulp",
     "prepublishOnly": "npm run compile",
     "lint": "eslint src --ext .ts",
     "lint:fix": "prettier --write '{src,tests}/**/*.ts'",
     "jest": "jest --coverage && cat ./coverage/lcov.info | coveralls",
-    "test": "npm run compile && npm run lint && npm run jest"
+    "test": "npm run tsc && npm run lint && npm run jest"
   },
   "author": "afc163 <afc163@gmail.com>",
   "license": "MIT",
