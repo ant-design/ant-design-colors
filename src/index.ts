@@ -24,12 +24,10 @@ const presetPrimaryColors: {
 
 const presetPalettes: PalettesProps = {};
 
-Object.keys(presetPrimaryColors).forEach(
-  (key): void => {
-    presetPalettes[key] = generate(presetPrimaryColors[key]);
-    presetPalettes[key].primary = presetPalettes[key][6];
-  },
-);
+Object.keys(presetPrimaryColors).forEach((key): void => {
+  presetPalettes[key] = generate(presetPrimaryColors[key]);
+  presetPalettes[key].primary = presetPalettes[key][6];
+});
 
 const red = presetPalettes.red;
 const volcano = presetPalettes.volcano;
