@@ -32,6 +32,7 @@ Object.keys(presetPrimaryColors).forEach((key): void => {
 const red = presetPalettes.red;
 const volcano = presetPalettes.volcano;
 const gold = presetPalettes.gold;
+const orange = presetPalettes.orange;
 const yellow = presetPalettes.yellow;
 const lime = presetPalettes.lime;
 const green = presetPalettes.green;
@@ -48,6 +49,7 @@ export {
   presetPrimaryColors,
   red,
   volcano,
+  orange,
   gold,
   yellow,
   lime,

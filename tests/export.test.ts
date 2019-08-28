@@ -1,4 +1,4 @@
-import { red, volcano, gold, yellow, lime, green, cyan, blue, geekblue, purple, magenta, grey } from '../src';
+import { red, volcano, orange, gold, yellow, lime, green, cyan, blue, geekblue, purple, magenta, grey } from '../src';
 import { blueColors } from './index.test';
 
 test(`import { blue } from '@ant-design/colors'`, () => {
@@ -9,6 +9,7 @@ test(`import { blue } from '@ant-design/colors'`, () => {
 test(`other colors'`, () => {
   expect(red.length).toEqual(10);
   expect(volcano.length).toEqual(10);
+  expect(orange.length).toEqual(10);
   expect(gold.length).toEqual(10);
   expect(yellow.length).toEqual(10);
   expect(lime.length).toEqual(10);
