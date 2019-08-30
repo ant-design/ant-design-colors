@@ -1,3 +1,4 @@
+import tinycolor from 'tinycolor2';
 import generate from './generate';
 
 export interface PalettesProps {
@@ -43,8 +44,13 @@ const purple = presetPalettes.purple;
 const magenta = presetPalettes.magenta;
 const grey = presetPalettes.grey;
 
+const isLight = (color: string): boolean => tinycolor(color).isLight();
+const isDark = (color: string): boolean => tinycolor(color).isDark();
+
 export {
   generate,
+  isLight,
+  isDark,
   presetPalettes,
   presetPrimaryColors,
   red,
