@@ -1,6 +1,6 @@
 {
   "name": "@ant-design/colors",
-  "version": "3.2.1",
+  "version": "3.2.2",
   "description": "Color palettes calculator of Ant Design",
   "main": "lib/index.js",
   "module": "lib/index.js",
