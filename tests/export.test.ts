@@ -2,7 +2,7 @@ import { red, volcano, orange, gold, yellow, lime, green, cyan, blue, geekblue, 
 import { blueColors } from './index.test';
 
 test(`import { blue } from '@ant-design/colors'`, () => {
-  expect(blue.primary).toEqual(blueColors[6]);
+  expect(blue.primary).toEqual(blueColors[5]);
   expect([...blue]).toEqual(blueColors);
 });
 

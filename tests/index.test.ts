@@ -17,6 +17,10 @@ test('Generate palettes from a given color', () => {
   expect(generate('#1890ff')).toEqual(blueColors);
 });
 
+test('Generate primary color', () => {
+  expect(presetPalettes.blue.primary).toEqual('#1890ff');
+});
+
 test('should contain preseted palettes', () => {
   expect(Object.keys(presetPalettes)).toEqual([
     'red',

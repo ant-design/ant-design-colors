@@ -26,7 +26,7 @@ const presetPalettes: PalettesProps = {};
 
 Object.keys(presetPrimaryColors).forEach((key): void => {
   presetPalettes[key] = generate(presetPrimaryColors[key]);
-  presetPalettes[key].primary = presetPalettes[key][6];
+  presetPalettes[key].primary = presetPalettes[key][5];
 });
 
 const red = presetPalettes.red;
