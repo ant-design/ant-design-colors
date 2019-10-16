@@ -1,12 +1,12 @@
 import tinycolor from 'tinycolor2';
 
-const hueStep: number = 2; // 色相阶梯
-const saturationStep: number = 16; // 饱和度阶梯，浅色部分
-const saturationStep2: number = 5; // 饱和度阶梯，深色部分
-const brightnessStep1: number = 5; // 亮度阶梯，浅色部分
-const brightnessStep2: number = 15; // 亮度阶梯，深色部分
-const lightColorCount: number = 5; // 浅色数量，主色上
-const darkColorCount: number = 4; // 深色数量，主色下
+const hueStep = 2; // 色相阶梯
+const saturationStep = 16; // 饱和度阶梯，浅色部分
+const saturationStep2 = 5; // 饱和度阶梯，深色部分
+const brightnessStep1 = 5; // 亮度阶梯，浅色部分
+const brightnessStep2 = 15; // 亮度阶梯，深色部分
+const lightColorCount = 5; // 浅色数量，主色上
+const darkColorCount = 4; // 深色数量，主色下
 
 interface HsvObject {
   h: number;
