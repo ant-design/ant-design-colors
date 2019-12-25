@@ -1,9 +1,14 @@
-import { red, volcano, orange, gold, yellow, lime, green, cyan, blue, geekblue, purple, magenta, grey } from '../src';
-import { blueColors } from './index.test';
+import { red, volcano, orange, gold, yellow, lime, green, cyan, blue, geekblue, purple, magenta, grey, presetDarkPalettes } from '../src';
+import { blueColors, blueDarkColors } from './index.test';
 
 test(`import { blue } from '@ant-design/colors'`, () => {
   expect(blue.primary).toEqual(blueColors[5]);
   expect([...blue]).toEqual(blueColors);
+});
+
+test(`import { presetDarkPalettes } from '@ant-design/colors'`, () => {
+  const darkBlue = presetDarkPalettes.blue;
+  expect([...darkBlue]).toEqual(blueDarkColors);
 });
 
 test(`other colors'`, () => {
@@ -20,4 +25,5 @@ test(`other colors'`, () => {
   expect(purple.length).toEqual(10);
   expect(magenta.length).toEqual(10);
   expect(grey.length).toEqual(10);
+  expect(presetDarkPalettes.blue.length).toEqual(10);
 });

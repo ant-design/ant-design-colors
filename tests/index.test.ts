@@ -13,8 +13,30 @@ export const blueColors = [
   '#002766',
 ].map(color => color.toLowerCase());
 
+export const blueDarkColors = [
+  '#111d2c',
+  '#112a45',
+  '#15395b',
+  '#164c7e',
+  '#1765ad',
+  '#177ddc',
+  '#3993dc',
+  '#65b7f3',
+  '#8bcbf3',
+  '#b2dcf3',
+];
+
 test('Generate palettes from a given color', () => {
   expect(generate('#1890ff')).toEqual(blueColors);
+});
+
+test('Generate dark palettes from a given color', () => {
+  expect(
+    generate('#1890ff', {
+      theme: 'dark',
+      backgroundColor: '#141414',
+    }),
+  ).toEqual(blueDarkColors);
 });
 
 test('Generate primary color', () => {
