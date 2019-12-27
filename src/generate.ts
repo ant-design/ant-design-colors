@@ -77,10 +77,8 @@ function getValue(hsv: HsvObject, i: number, light?: boolean): number {
   return Math.round(hsv.v * 100) - brightnessStep2 * i;
 }
 
-export type Theme = 'dark' | 'default';
-
 interface Opts {
-  theme?: Theme;
+  theme?: 'dark' | 'default';
   backgroundColor?: string;
 }
 
