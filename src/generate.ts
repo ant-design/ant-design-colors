@@ -7,6 +7,19 @@ const brightnessStep1 = 5; // 亮度阶梯，浅色部分
 const brightnessStep2 = 15; // 亮度阶梯，深色部分
 const lightColorCount = 5; // 浅色数量，主色上
 const darkColorCount = 4; // 深色数量，主色下
+// 暗色主题颜色映射关系表
+const darkColorMap = [
+  { index: 7, opacity: 0.15 },
+  { index: 6, opacity: 0.25 },
+  { index: 5, opacity: 0.3 },
+  { index: 5, opacity: 0.45 },
+  { index: 5, opacity: 0.65 },
+  { index: 5, opacity: 0.85 },
+  { index: 4, opacity: 0.85 },
+  { index: 3, opacity: 0.95 },
+  { index: 2, opacity: 0.95 },
+  { index: 1, opacity: 0.95 },
+];
 
 interface HsvObject {
   h: number;
@@ -64,7 +77,12 @@ function getValue(hsv: HsvObject, i: number, light?: boolean): number {
   return Math.round(hsv.v * 100) - brightnessStep2 * i;
 }
 
-export default function generate(color: string): string[] {
+interface Opts {
+  theme?: 'dark' | 'default';
+  backgroundColor?: string;
+}
+
+export default function generate(color: string, opts: Opts = {}): string[] {
   const patterns: Array<string> = [];
   const pColor = tinycolor(color);
   for (let i = lightColorCount; i > 0; i -= 1) {
@@ -85,6 +103,16 @@ export default function generate(color: string): string[] {
       v: getValue(hsv, i),
     }).toHexString();
     patterns.push(colorString);
+  }
+
+  // dark theme patterns
+  if (opts.theme === 'dark') {
+    return darkColorMap.map(({ index, opacity }) => {
+      const darkColorString: string = tinycolor
+        .mix(opts.backgroundColor || '#141414', patterns[index], opacity * 100)
+        .toHexString();
+      return darkColorString;
+    });
   }
   return patterns;
 }

@@ -23,10 +23,18 @@ const presetPrimaryColors: {
 };
 
 const presetPalettes: PalettesProps = {};
+const presetDarkPalettes: PalettesProps = {};
 
 Object.keys(presetPrimaryColors).forEach((key): void => {
   presetPalettes[key] = generate(presetPrimaryColors[key]);
   presetPalettes[key].primary = presetPalettes[key][5];
+
+  // dark presetPalettes
+  presetDarkPalettes[key] = generate(presetPrimaryColors[key], {
+    theme: 'dark',
+    backgroundColor: '#141414',
+  });
+  presetDarkPalettes[key].primary = presetDarkPalettes[key][5];
 });
 
 const red = presetPalettes.red;
@@ -46,6 +54,7 @@ const grey = presetPalettes.grey;
 export {
   generate,
   presetPalettes,
+  presetDarkPalettes,
   presetPrimaryColors,
   red,
   volcano,

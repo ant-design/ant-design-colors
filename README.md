@@ -61,6 +61,34 @@ console.log(presetPalettes);
 */
 ```
 
+```js
+import { generate, presetDarkPalettes } from '@ant-design/colors';
+
+// Generate dark color palettes by a given color
+const colors = generate('#1890ff', {
+  theme: 'dark',
+  backgroundColor: '#141414'
+});
+console.log(colors); // ["#111d2c", "#112a45", "#15395b", "#164c7e", "#1765ad", "#177ddc", "#3993dc", "#65b7f3", "#8bcbf3", "#b2dcf3"]
+console.log(presetDarkPalettes);
+/*
+{
+  red: [...],
+  volcano: [...],
+  orange: [...],
+  gold: [...],
+  yellow: [...],
+  lime: [...],
+  green: [...],
+  cyan: [...],
+  blue: [...],
+  geekblue: [...],
+  purple: [...],
+  magenta: [...],
+}
+*/
+```
+
 ## Articles
 
 - [Ant Design Colors](https://ant.design/docs/spec/colors)
