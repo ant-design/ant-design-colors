@@ -15,10 +15,10 @@ const darkColorMap = [
   { index: 5, opacity: 0.45 },
   { index: 5, opacity: 0.65 },
   { index: 5, opacity: 0.85 },
-  { index: 4, opacity: 0.85 },
+  { index: 4, opacity: 0.9 },
   { index: 3, opacity: 0.95 },
-  { index: 2, opacity: 0.95 },
-  { index: 1, opacity: 0.95 },
+  { index: 2, opacity: 0.97 },
+  { index: 1, opacity: 0.98 },
 ];
 
 interface HsvObject {

@@ -20,10 +20,10 @@ export const blueDarkColors = [
   '#164c7e',
   '#1765ad',
   '#177ddc',
-  '#3993dc',
+  '#3c9ae8',
   '#65b7f3',
-  '#8bcbf3',
-  '#b2dcf3',
+  '#8dcff8',
+  '#b7e3fa',
 ];
 
 test('Generate palettes from a given color', () => {
