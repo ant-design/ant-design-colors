@@ -17,7 +17,7 @@
   "scripts": {
     "tsc": "tsc",
     "compile": "gulp",
-    "prepublishOnly": "npm run compile",
+    "prepublishOnly": "npm run compile && np --yolo",
     "lint": "eslint src --ext .ts",
     "lint:fix": "prettier --write '{src,tests}/**/*.ts'",
     "jest": "jest --coverage && cat ./coverage/lcov.info | coveralls",
@@ -40,6 +40,7 @@
     "gulp": "^4.0.2",
     "gulp-typescript": "^5.0.1",
     "jest": "^25.1.0",
+    "np": "^6.2.0",
     "prettier": "^1.16.4",
     "ts-jest": "^25.0.0",
     "typescript": "^3.4.2"
