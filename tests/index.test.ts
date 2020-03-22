@@ -11,7 +11,7 @@ export const blueColors = [
   '#0050B3',
   '#003A8C',
   '#002766',
-].map(color => color.toLowerCase());
+].map((color) => color.toLowerCase());
 
 export const blueDarkColors = [
   '#111d2c',
