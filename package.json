@@ -41,7 +41,7 @@
     "gulp-typescript": "^5.0.1",
     "jest": "^25.1.0",
     "prettier": "^2.0.0",
-    "ts-jest": "^25.0.0",
+    "ts-jest": "^26.0.0",
     "typescript": "^3.4.2"
   },
   "homepage": "https://github.com/ant-design/ant-design-colors#readme"
