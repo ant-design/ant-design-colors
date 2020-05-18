@@ -39,7 +39,7 @@
     "eslint-plugin-prettier": "^3.0.1",
     "gulp": "^4.0.2",
     "gulp-typescript": "^5.0.1",
-    "jest": "^25.1.0",
+    "jest": "^26.0.1",
     "prettier": "^2.0.0",
     "ts-jest": "^26.0.0",
     "typescript": "^3.4.2"
