@@ -1,10 +1,10 @@
 import tinycolor from 'tinycolor2';
 
 const hueStep = 2; // 色相阶梯
-const saturationStep = 16; // 饱和度阶梯，浅色部分
-const saturationStep2 = 5; // 饱和度阶梯，深色部分
-const brightnessStep1 = 5; // 亮度阶梯，浅色部分
-const brightnessStep2 = 15; // 亮度阶梯，深色部分
+const saturationStep = 0.16; // 饱和度阶梯，浅色部分
+const saturationStep2 = 0.05; // 饱和度阶梯，深色部分
+const brightnessStep1 = 0.05; // 亮度阶梯，浅色部分
+const brightnessStep2 = 0.15; // 亮度阶梯，深色部分
 const lightColorCount = 5; // 浅色数量，主色上
 const darkColorCount = 4; // 深色数量，主色下
 // 暗色主题颜色映射关系表
@@ -50,31 +50,37 @@ function getSaturation(hsv: HsvObject, i: number, light?: boolean): number {
   }
   let saturation: number;
   if (light) {
-    saturation = Math.round(hsv.s * 100) - saturationStep * i;
+    saturation = hsv.s - saturationStep * i;
   } else if (i === darkColorCount) {
-    saturation = Math.round(hsv.s * 100) + saturationStep;
+    saturation = hsv.s + saturationStep;
   } else {
-    saturation = Math.round(hsv.s * 100) + saturationStep2 * i;
+    saturation = hsv.s + saturationStep2 * i;
   }
   // 边界值修正
-  if (saturation > 100) {
-    saturation = 100;
+  if (saturation > 1) {
+    saturation = 1;
   }
-  // 第一格的 s 限制在 6-10 之间
-  if (light && i === lightColorCount && saturation > 10) {
-    saturation = 10;
+  // 第一格的 s 限制在 0.06-0.1 之间
+  if (light && i === lightColorCount && saturation > 0.1) {
+    saturation = 0.1;
   }
-  if (saturation < 6) {
-    saturation = 6;
+  if (saturation < 0.06) {
+    saturation = 0.06;
   }
-  return saturation;
+  return Number(saturation.toFixed(2));
 }
 
 function getValue(hsv: HsvObject, i: number, light?: boolean): number {
+  let value: number;
   if (light) {
-    return Math.round(hsv.v * 100) + brightnessStep1 * i;
+    value = hsv.v + brightnessStep1 * i;
+  } else {
+    value = hsv.v - brightnessStep2 * i;
   }
-  return Math.round(hsv.v * 100) - brightnessStep2 * i;
+  if (value > 1) {
+    value = 1;
+  }
+  return Number(value.toFixed(2));
 }
 
 interface Opts {
