@@ -3,7 +3,7 @@
   "version": "4.0.1",
   "description": "Color palettes calculator of Ant Design",
   "main": "lib/index.js",
-  "module": "lib/index.js",
+  "module": "es/index.js",
   "files": [
     "lib"
   ],
