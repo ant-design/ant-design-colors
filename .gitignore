@@ -31,3 +31,4 @@ package-lock.json
 /.history
 lib
 es
+dist
