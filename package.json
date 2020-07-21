@@ -17,7 +17,7 @@
   "scripts": {
     "tsc": "tsc",
     "compile": "father build --esm --cjs",
-    "prepublishOnly": "npm run compile",
+    "prepublishOnly": "npm run compile && np --no-cleanup --no-publish",
     "lint": "eslint src --ext .ts",
     "lint:fix": "prettier --write '{src,tests}/**/*.ts'",
     "jest": "jest --coverage && cat ./coverage/lcov.info | coveralls",
@@ -39,6 +39,7 @@
     "eslint-plugin-prettier": "^3.0.1",
     "father": "^2.29.5",
     "jest": "^26.0.1",
+    "np": "^6.3.2",
     "prettier": "^2.0.0",
     "ts-jest": "^26.0.0",
     "typescript": "^3.4.2"
