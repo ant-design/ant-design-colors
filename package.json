@@ -15,7 +15,7 @@
     "url": "https://github.com/ant-design/ant-design-colors/issues"
   },
   "scripts": {
-    "tsc": "tsc",
+    "tsc": "tsc --noEmit",
     "compile": "father build --esm --cjs",
     "prepublishOnly": "npm run compile && np --no-cleanup --no-publish",
     "lint": "eslint src --ext .ts",
