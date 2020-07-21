@@ -5,7 +5,9 @@
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "files": [
-    "lib"
+    "lib",
+    "dist/index.js",
+    "dist/index.esm.js"
   ],
   "repository": {
     "type": "git",
