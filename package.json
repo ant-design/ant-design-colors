@@ -7,8 +7,10 @@
   "files": [
     "lib",
     "dist/index.js",
-    "dist/index.esm.js"
+    "dist/index.esm.js",
+    "dist/src/index.d.ts"
   ],
+  "typings": "dist/src/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ant-design/ant-design-colors.git"
