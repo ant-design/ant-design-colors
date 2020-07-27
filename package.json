@@ -8,7 +8,8 @@
     "lib",
     "dist/index.js",
     "dist/index.esm.js",
-    "dist/src/index.d.ts"
+    "dist/src/index.d.ts",
+    "dist/src/generate.d.ts"
   ],
   "typings": "dist/src/index.d.ts",
   "repository": {
