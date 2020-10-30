@@ -45,7 +45,7 @@
     "eslint-plugin-prettier": "^3.0.1",
     "father": "^2.29.5",
     "jest": "^26.0.1",
-    "np": "^6.3.2",
+    "np": "^7.0.0",
     "prettier": "^2.0.0",
     "ts-jest": "^26.0.0",
     "typescript": "^4.0.2"
