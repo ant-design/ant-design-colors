@@ -32,7 +32,7 @@
   "author": "afc163 <afc163@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "tinycolor2": "^1.4.1"
+    "@ctrl/tinycolor": "^3.1.6"
   },
   "devDependencies": {
     "@types/jest": "^26.0.0",
