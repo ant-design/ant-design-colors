@@ -1,6 +1,6 @@
 {
   "name": "@ant-design/colors",
-  "version": "4.0.5",
+  "version": "5.0.0",
   "description": "Color palettes calculator of Ant Design",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
