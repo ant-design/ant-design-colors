@@ -1,4 +1,4 @@
-import tinycolor from 'tinycolor2';
+import { TinyColor } from '@ctrl/tinycolor';
 
 const hueStep = 2; // 色相阶梯
 const saturationStep = 0.16; // 饱和度阶梯，浅色部分
@@ -90,10 +90,10 @@ interface Opts {
 
 export default function generate(color: string, opts: Opts = {}): string[] {
   const patterns: Array<string> = [];
-  const pColor = tinycolor(color);
+  const pColor = new TinyColor(color);
   for (let i = lightColorCount; i > 0; i -= 1) {
     const hsv = pColor.toHsv();
-    const colorString: string = tinycolor({
+    const colorString: string = new TinyColor({
       h: getHue(hsv, i, true),
       s: getSaturation(hsv, i, true),
       v: getValue(hsv, i, true),
@@ -103,7 +103,7 @@ export default function generate(color: string, opts: Opts = {}): string[] {
   patterns.push(pColor.toHexString());
   for (let i = 1; i <= darkColorCount; i += 1) {
     const hsv = pColor.toHsv();
-    const colorString: string = tinycolor({
+    const colorString: string = new TinyColor({
       h: getHue(hsv, i),
       s: getSaturation(hsv, i),
       v: getValue(hsv, i),
@@ -114,8 +114,8 @@ export default function generate(color: string, opts: Opts = {}): string[] {
   // dark theme patterns
   if (opts.theme === 'dark') {
     return darkColorMap.map(({ index, opacity }) => {
-      const darkColorString: string = tinycolor
-        .mix(opts.backgroundColor || '#141414', patterns[index], opacity * 100)
+      const darkColorString: string = new TinyColor(opts.backgroundColor || '#141414') 
+        .mix(patterns[index], opacity * 100)
         .toHexString();
       return darkColorString;
     });
