@@ -114,7 +114,7 @@ export default function generate(color: string, opts: Opts = {}): string[] {
   // dark theme patterns
   if (opts.theme === 'dark') {
     return darkColorMap.map(({ index, opacity }) => {
-      const darkColorString: string = new TinyColor(opts.backgroundColor || '#141414') 
+      const darkColorString: string = new TinyColor(opts.backgroundColor || '#141414')
         .mix(patterns[index], opacity * 100)
         .toHexString();
       return darkColorString;
