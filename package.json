@@ -32,11 +32,10 @@
   "author": "afc163 <afc163@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@ctrl/tinycolor": "^3.1.6"
+    "@ctrl/tinycolor": "^3.3.0"
   },
   "devDependencies": {
     "@types/jest": "^26.0.0",
-    "@types/tinycolor2": "^1.4.1",
     "@typescript-eslint/eslint-plugin": "^4.0.0",
     "@typescript-eslint/parser": "^4.7.0",
     "coveralls": "^3.0.3",
