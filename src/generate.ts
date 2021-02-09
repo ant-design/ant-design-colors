@@ -51,9 +51,6 @@ function toHex({ r, g, b }: RgbObject): string {
 // Amount in range [0, 1]
 // Assume color1 & color2 has no alpha, since the following src code did so.
 function mix(rgb1: RgbObject, rgb2: RgbObject, amount: number): RgbObject {
-  if (amount === void 0) {
-    amount = 50;
-  }
   const p = amount / 100;
   const rgb = {
     r: (rgb2.r - rgb1.r) * p + rgb1.r,
