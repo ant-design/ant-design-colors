@@ -35,14 +35,14 @@ interface RgbObject {
 }
 
 // Wrapper function ported from TinyColor.prototype.toHsv
-// Keep it here because `hsv.h * 360`
+// Keep it here because of `hsv.h * 360`
 function toHsv({ r, g, b }: RgbObject): HsvObject {
   const hsv = rgbToHsv(r, g, b);
   return { h: hsv.h * 360, s: hsv.s, v: hsv.v };
 }
 
 // Wrapper function ported from TinyColor.prototype.toHexString
-// Keep it here because the prefix `#`
+// Keep it here because of the prefix `#`
 function toHex({ r, g, b }: RgbObject): string {
   return `#${rgbToHex(r, g, b, false)}`;
 }
