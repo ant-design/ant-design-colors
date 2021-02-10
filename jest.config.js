@@ -1,5 +1,4 @@
 module.exports = {
+  preset: 'ts-jest',
   collectCoverage: true,
-  // transform @ctrl/tinycolor imports from node_modules
-  transformIgnorePatterns: [],
 };
