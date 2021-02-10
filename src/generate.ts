@@ -1,5 +1,4 @@
-import { rgbToHsv, rgbToHex } from '@ctrl/tinycolor/dist/module/conversion';
-import { inputToRGB } from '@ctrl/tinycolor/dist/module/format-input';
+import { rgbToHsv, rgbToHex, inputToRGB } from '@ctrl/tinycolor';
 
 const hueStep = 2; // 色相阶梯
 const saturationStep = 0.16; // 饱和度阶梯，浅色部分
