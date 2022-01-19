@@ -70,3 +70,5 @@ export {
   magenta,
   grey,
 };
+
+export const gray = grey;
