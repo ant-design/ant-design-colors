@@ -1,4 +1,4 @@
-import { rgbToHsv, rgbToHex, inputToRGB, tinycolor, TinyColor } from '@ctrl/tinycolor';
+import { rgbToHsv, rgbToHex, inputToRGB } from '@ctrl/tinycolor';
 
 const hueStep = 2; // 色相阶梯
 const saturationStep = 0.16; // 饱和度阶梯，浅色部分
@@ -157,8 +157,4 @@ export default function generate(color: string, opts: Opts = {}): string[] {
     });
   }
   return patterns;
-}
-
-export function generateGrayscale(percentage: number): TinyColor {
-  return tinycolor('white').setAlpha(percentage).onBackground(tinycolor('black'));
 }

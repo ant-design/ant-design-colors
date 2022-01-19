@@ -1,4 +1,5 @@
-import generate, { generateGrayscale } from './generate';
+import tinycolor from '@ctrl/tinycolor';
+import generate from './generate';
 
 export interface PalettesProps {
   [key: string]: readonly string[] & { primary?: string };
@@ -37,9 +38,10 @@ Object.keys(presetPrimaryColors).forEach((key): void => {
 });
 
 // Per antd@4.18 neutral colors use a separate pattern
-const grayscaleGradient: number[] = [1, 0.98, 0.96, 0.94, 0.85, 0.75, 0.55, 0.35, 0.263, 0.15, 0.12, 0.08, 0];
+const black = tinycolor('black');
+const grayscaleGradient: number[] = [100, 98, 96, 94, 85, 75, 55, 35, 26.3, 15, 12, 8, 0];
 
-const grayColors = grayscaleGradient.map((percent) => `#${generateGrayscale(percent).toHex()}`);
+const grayColors = grayscaleGradient.map((brightness) => `#${black.lighten(brightness).toHex()}`);
 
 presetPalettes.grey = presetDarkPalettes.grey = grayColors;
 presetDarkPalettes.grey.primary = presetDarkPalettes.grey.primary = '#BFBFBF';
