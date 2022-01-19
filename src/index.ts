@@ -1,7 +1,7 @@
-import generate from './generate';
+import generate, { generateGrayscale } from './generate';
 
 export interface PalettesProps {
-  [key: string]: string[] & { primary?: string };
+  [key: string]: readonly string[] & { primary?: string };
 }
 
 const presetPrimaryColors: {
@@ -19,7 +19,6 @@ const presetPrimaryColors: {
   geekblue: '#2F54EB',
   purple: '#722ED1',
   magenta: '#EB2F96',
-  grey: '#666666',
 };
 
 const presetPalettes: PalettesProps = {};
@@ -36,6 +35,14 @@ Object.keys(presetPrimaryColors).forEach((key): void => {
   });
   presetDarkPalettes[key].primary = presetDarkPalettes[key][5];
 });
+
+// Per antd@4.18 neutral colors use a separate pattern
+const grayscaleGradient: number[] = [1, 0.98, 0.96, 0.94, 0.85, 0.75, 0.55, 0.35, 0.263, 0.15, 0.12, 0.08, 0];
+
+const grayColors = grayscaleGradient.map((percent) => `#${generateGrayscale(percent).toHex()}`);
+
+presetPalettes.grey = presetDarkPalettes.grey = grayColors;
+presetDarkPalettes.grey.primary = presetDarkPalettes.grey.primary = '#BFBFBF';
 
 const red = presetPalettes.red;
 const volcano = presetPalettes.volcano;
