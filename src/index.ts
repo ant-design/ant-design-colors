@@ -1,7 +1,8 @@
+import tinycolor from '@ctrl/tinycolor';
 import generate from './generate';
 
 export interface PalettesProps {
-  [key: string]: string[] & { primary?: string };
+  [key: string]: readonly string[] & { primary?: string };
 }
 
 const presetPrimaryColors: {
@@ -19,7 +20,6 @@ const presetPrimaryColors: {
   geekblue: '#2F54EB',
   purple: '#722ED1',
   magenta: '#EB2F96',
-  grey: '#666666',
 };
 
 const presetPalettes: PalettesProps = {};
@@ -36,6 +36,15 @@ Object.keys(presetPrimaryColors).forEach((key): void => {
   });
   presetDarkPalettes[key].primary = presetDarkPalettes[key][5];
 });
+
+// Per antd@4.18 neutral colors use a separate pattern
+const black = tinycolor('black');
+const grayscaleGradient: number[] = [100, 98, 96, 94, 85, 75, 55, 35, 26.3, 15, 12, 8, 0];
+
+const grayColors = grayscaleGradient.map((brightness) => `#${black.lighten(brightness).toHex()}`);
+
+presetPalettes.grey = presetDarkPalettes.grey = grayColors;
+presetDarkPalettes.grey.primary = presetDarkPalettes.grey.primary = '#BFBFBF';
 
 const red = presetPalettes.red;
 const volcano = presetPalettes.volcano;
