@@ -5,6 +5,7 @@ import {
   gold,
   green,
   grey,
+  gray,
   lime,
   magenta,
   orange,
@@ -14,16 +15,16 @@ import {
   volcano,
   yellow,
 } from '../src';
-import { blueColors, blueDarkColors } from './index.test';
+import { presetBlueColors, presetBlueDarkColors } from './index.test';
 
 test(`import { blue } from '@ant-design/colors'`, () => {
-  expect(blue.primary).toEqual(blueColors[5]);
-  expect([...blue]).toEqual(blueColors);
+  expect(blue.primary).toEqual(presetBlueColors[5]);
+  expect([...blue]).toEqual(presetBlueColors);
 });
 
 test(`import { presetDarkPalettes } from '@ant-design/colors'`, () => {
   const darkBlue = presetDarkPalettes.blue;
-  expect([...darkBlue]).toEqual(blueDarkColors);
+  expect([...darkBlue]).toEqual(presetBlueDarkColors);
 });
 
 test(`other colors'`, () => {
@@ -40,6 +41,7 @@ test(`other colors'`, () => {
   expect(purple.length).toEqual(10);
   expect(magenta.length).toEqual(10);
   expect(grey.length).toEqual(10);
+  expect(gray.length).toEqual(10);
 
   expect(presetDarkPalettes.red.length).toEqual(10);
   expect(presetDarkPalettes.volcano.length).toEqual(10);
