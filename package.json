@@ -2,16 +2,13 @@
   "name": "@ant-design/colors",
   "version": "6.0.0",
   "description": "Color palettes calculator of Ant Design",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
+  "main": "./lib/index",
+  "module": "./es/index",
+  "typings": "es/index.d.ts",
   "files": [
     "lib",
-    "dist/index.js",
-    "dist/index.esm.js",
-    "dist/src/index.d.ts",
-    "dist/src/generate.d.ts"
+    "es"
   ],
-  "typings": "dist/src/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ant-design/ant-design-colors.git"
@@ -21,7 +18,7 @@
   },
   "scripts": {
     "tsc": "tsc --noEmit",
-    "compile": "father build --esm --cjs",
+    "compile": "father build",
     "prepublishOnly": "npm run compile && np --no-cleanup --no-publish",
     "lint": "eslint src --ext .ts",
     "lint:fix": "prettier --write '{src,tests}/**/*.ts'",
@@ -42,7 +39,7 @@
     "eslint": "^7.1.0",
     "eslint-config-prettier": "^8.0.0",
     "eslint-plugin-prettier": "^3.0.1",
-    "father": "^2.29.5",
+    "father": "^4.1.2",
     "jest": "^26.0.1",
     "np": "^7.0.0",
     "prettier": "^2.0.0",
