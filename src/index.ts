@@ -1,6 +1,5 @@
 import generate from './generate';
 
-
 const presetPrimaryColors: Record<string, string> = {
   red: '#F5222D',
   volcano: '#FA541C',

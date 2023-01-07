@@ -10,7 +10,7 @@ export const presetBlueColors = [
   '#0958d9',
   '#003eb3',
   '#002c8c',
-  '#001d66'
+  '#001d66',
 ].map((color) => color.toLowerCase());
 
 export const presetBlueDarkColors = [
@@ -23,7 +23,7 @@ export const presetBlueDarkColors = [
   '#3c89e8',
   '#65a9f3',
   '#8dc5f8',
-  '#b7dcfa'
+  '#b7dcfa',
 ];
 
 test('Generate palettes from a given color', () => {
@@ -37,7 +37,7 @@ test('Generate palettes from a given color', () => {
     '#096dd9',
     '#0050b3',
     '#003a8c',
-    '#002766'
+    '#002766',
   ]);
 });
 
