@@ -17,14 +17,12 @@
     "url": "https://github.com/ant-design/ant-design-colors/issues"
   },
   "scripts": {
-    "tsc": "tsc --noEmit",
     "compile": "father build",
-    "prepublishOnly": "npm run compile && np --no-cleanup --no-publish",
+    "coverage": "npm test -- --coverage && coveralls < coverage/lcov.info",
     "lint": "eslint src --ext .ts",
-    "lint:fix": "prettier --write '{src,tests}/**/*.ts'",
-    "jest": "jest",
-    "coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls",
-    "test": "npm run tsc && npm run lint && npm run jest"
+    "prepublishOnly": "npm run compile && np --no-cleanup --no-publish",
+    "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
+    "test": "jest"
   },
   "author": "afc163 <afc163@gmail.com>",
   "license": "MIT",
@@ -33,12 +31,9 @@
   },
   "devDependencies": {
     "@types/jest": "^26.0.0",
-    "@typescript-eslint/eslint-plugin": "^4.0.0",
-    "@typescript-eslint/parser": "^4.7.0",
-    "coveralls": "^3.0.3",
+    "@umijs/fabric": "^3.0.0",
+    "coveralls": "^3.1.1",
     "eslint": "^7.1.0",
-    "eslint-config-prettier": "^8.0.0",
-    "eslint-plugin-prettier": "^3.0.1",
     "father": "^4.1.2",
     "jest": "^26.0.1",
     "np": "^7.0.0",
