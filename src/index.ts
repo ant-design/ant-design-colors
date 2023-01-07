@@ -10,7 +10,7 @@ const presetPrimaryColors: Record<string, string> = {
   lime: '#A0D911',
   green: '#52C41A',
   cyan: '#13C2C2',
-  blue: '#1890FF',
+  blue: '#1677FF',
   geekblue: '#2F54EB',
   purple: '#722ED1',
   magenta: '#EB2F96',
