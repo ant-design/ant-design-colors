@@ -121,7 +121,7 @@ interface Opts {
 }
 
 export default function generate(color: string, opts: Opts = {}): string[] {
-  const patterns: Array<string> = [];
+  const patterns: string[] = [];
   const pColor = inputToRGB(color);
   for (let i = lightColorCount; i > 0; i -= 1) {
     const hsv = toHsv(pColor);

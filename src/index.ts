@@ -1,12 +1,8 @@
 import generate from './generate';
 
-export interface PalettesProps {
-  [key: string]: string[] & { primary?: string };
-}
+export type PalettesProps = Record<string, string[] & { primary?: string }>;
 
-const presetPrimaryColors: {
-  [key: string]: string;
-} = {
+const presetPrimaryColors: Record<string, string> = {
   red: '#F5222D',
   volcano: '#FA541C',
   orange: '#FA8C16',
