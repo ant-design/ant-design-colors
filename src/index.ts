@@ -1,12 +1,6 @@
 import generate from './generate';
 
-export interface PalettesProps {
-  [key: string]: string[] & { primary?: string };
-}
-
-const presetPrimaryColors: {
-  [key: string]: string;
-} = {
+const presetPrimaryColors: Record<string, string> = {
   red: '#F5222D',
   volcano: '#FA541C',
   orange: '#FA8C16',
@@ -15,7 +9,7 @@ const presetPrimaryColors: {
   lime: '#A0D911',
   green: '#52C41A',
   cyan: '#13C2C2',
-  blue: '#1890FF',
+  blue: '#1677FF',
   geekblue: '#2F54EB',
   purple: '#722ED1',
   magenta: '#EB2F96',
@@ -50,6 +44,9 @@ const geekblue = presetPalettes.geekblue;
 const purple = presetPalettes.purple;
 const magenta = presetPalettes.magenta;
 const grey = presetPalettes.grey;
+const gray = presetPalettes.grey;
+
+export type PalettesProps = Record<string, string[] & { primary?: string }>;
 
 export {
   generate,
@@ -69,6 +66,5 @@ export {
   purple,
   magenta,
   grey,
+  gray,
 };
-
-export const gray = grey;

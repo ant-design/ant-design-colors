@@ -4,13 +4,10 @@
 
 :art: Color palettes calculator of [Ant Design](https://ant.design/docs/spec/colors).
 
-[![Travis](https://img.shields.io/travis/ant-design/ant-design-colors/master.svg?style=flat-square)](https://travis-ci.org/ant-design/ant-design-colors)
-[![Test coverage](https://img.shields.io/coveralls/ant-design/ant-design-colors.svg?style=flat-square)](https://coveralls.io/r/ant-design/ant-design-colors?branch=master)
-[![npm package](https://img.shields.io/npm/v/@ant-design/colors.svg?style=flat-square)](https://www.npmjs.org/package/@ant-design/colors)
-[![NPM downloads](http://img.shields.io/npm/dm/@ant-design/colors.svg?style=flat-square)](http://npmjs.com/@ant-design/colors)
+[![Travis](https://img.shields.io/travis/ant-design/ant-design-colors/master.svg?style=flat-square)](https://travis-ci.org/ant-design/ant-design-colors) [![Test coverage](https://img.shields.io/coveralls/ant-design/ant-design-colors.svg?style=flat-square)](https://coveralls.io/r/ant-design/ant-design-colors?branch=master) [![npm package](https://img.shields.io/npm/v/@ant-design/colors.svg?style=flat-square)](https://www.npmjs.org/package/@ant-design/colors) [![NPM downloads](http://img.shields.io/npm/dm/@ant-design/colors.svg?style=flat-square)](http://npmjs.com/@ant-design/colors)
 
-[![Dependencies](https://img.shields.io/david/ant-design/ant-design-colors.svg?style=flat-square)](https://david-dm.org/ant-design/ant-design-colors)
-[![DevDependencies](https://img.shields.io/david/dev/ant-design/ant-design-colors.svg?style=flat-square)](https://david-dm.org/ant-design/ant-design-colors?type=dev) [![Greenkeeper badge](https://badges.greenkeeper.io/ant-design/ant-design-colors.svg)](https://greenkeeper.io/)
+[![Dependencies](https://img.shields.io/david/ant-design/ant-design-colors.svg?style=flat-square)](https://david-dm.org/ant-design/ant-design-colors) [![DevDependencies](https://img.shields.io/david/dev/ant-design/ant-design-colors.svg?style=flat-square)](https://david-dm.org/ant-design/ant-design-colors?type=dev) [![Greenkeeper badge](https://badges.greenkeeper.io/ant-design/ant-design-colors.svg)](https://greenkeeper.io/)
+
 </div>
 
 ![](https://user-images.githubusercontent.com/507615/55726820-43e68400-5a43-11e9-8541-b0fc28b78f37.png)
@@ -30,10 +27,23 @@ $ npm install @ant-design/colors --save
 ```
 
 ```js
-import { red, volcano, gold, yellow, lime, green, cyan, blue, geekblue, purple, magenta, grey } from '@ant-design/colors';
+import {
+  red,
+  volcano,
+  gold,
+  yellow,
+  lime,
+  green,
+  cyan,
+  blue,
+  geekblue,
+  purple,
+  magenta,
+  grey,
+} from '@ant-design/colors';
 
-console.log(blue); // ['#E6F7FF', '#BAE7FF', '#91D5FF', ''#69C0FF', '#40A9FF', '#1890FF', '#096DD9', '#0050B3', '#003A8C', '#002766']
-console.log(blue.primary); // '#1890FF'
+console.log(blue); // ['#E6F4FF', '#BAE0FF', '#91CAFF', '#69B1FF', '#4096FF', '#1677FF', '#0958D9', '#003EB3', '#002C8C', '#001D66']
+console.log(blue.primary); // '#1677FF'
 ```
 
 ```js
@@ -67,9 +77,9 @@ import { generate, presetDarkPalettes } from '@ant-design/colors';
 // Generate dark color palettes by a given color
 const colors = generate('#1890ff', {
   theme: 'dark',
-  backgroundColor: '#141414'
+  backgroundColor: '#141414',
 });
-console.log(colors); // ["#111d2c", "#112a45", "#15395b", "#164c7e", "#1765ad", "#177ddc", "#3993dc", "#65b7f3", "#8bcbf3", "#b2dcf3"]
+console.log(colors); // ['#111d2c', '#112a45', '#15395b', '#164c7e', '#1765ad', '#177ddc', '#3c9ae8', '#65b7f3', '#8dcff8', '#b7e3fa']
 console.log(presetDarkPalettes);
 /*
 {

@@ -1,4 +1,4 @@
-import { rgbToHsv, rgbToHex, inputToRGB } from '@ctrl/tinycolor';
+import { inputToRGB, rgbToHex, rgbToHsv } from '@ctrl/tinycolor';
 
 const hueStep = 2; // 色相阶梯
 const saturationStep = 0.16; // 饱和度阶梯，浅色部分
@@ -121,7 +121,7 @@ interface Opts {
 }
 
 export default function generate(color: string, opts: Opts = {}): string[] {
-  const patterns: Array<string> = [];
+  const patterns: string[] = [];
   const pColor = inputToRGB(color);
   for (let i = lightColorCount; i > 0; i -= 1) {
     const hsv = toHsv(pColor);
@@ -151,7 +151,11 @@ export default function generate(color: string, opts: Opts = {}): string[] {
   if (opts.theme === 'dark') {
     return darkColorMap.map(({ index, opacity }) => {
       const darkColorString: string = toHex(
-        mix(inputToRGB(opts.backgroundColor || '#141414'), inputToRGB(patterns[index]), opacity * 100),
+        mix(
+          inputToRGB(opts.backgroundColor || '#141414'),
+          inputToRGB(patterns[index]),
+          opacity * 100,
+        ),
       );
       return darkColorString;
     });

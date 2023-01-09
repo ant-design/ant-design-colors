@@ -1,8 +1,18 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["es2017", "DOM"],
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "strict": true,
-    "esModuleInterop": true
+    "skipLibCheck": true,
+    "target": "es2015",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   }
 }
