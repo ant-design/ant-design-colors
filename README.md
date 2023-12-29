@@ -17,7 +17,7 @@
 [github-action-image]: https://github.com/ant-design/ant-design-colors/actions/workflows/ci.yml/badge.svg
 [github-action-url]: https://github.com/ant-design/ant-design-colors/actions/workflows/ci.yml
 [codecov-image]: https://img.shields.io/codecov/c/github/ant-design/ant-design-colors/main.svg?style=flat-square
-[codecov-url]: https://codecov.io/gh/ant-design/ant-design/branch/main
+[codecov-url]: https://codecov.io/gh/ant-design/ant-design-colors/branch/main
 [download-image]: https://img.shields.io/npm/dm/@ant-design/colors.svg?style=flat-square
 [download-url]: https://npmjs.org/package/@ant-design/colors
 [bundlephobia-image]: https://badgen.net/bundlephobia/minzip/@ant-design/colors?style=flat-square
