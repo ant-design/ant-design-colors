@@ -4,10 +4,24 @@
 
 :art: Color palettes calculator of [Ant Design](https://ant.design/docs/spec/colors).
 
-[![Travis](https://img.shields.io/travis/ant-design/ant-design-colors/master.svg?style=flat-square)](https://travis-ci.org/ant-design/ant-design-colors) [![Test coverage](https://img.shields.io/coveralls/ant-design/ant-design-colors.svg?style=flat-square)](https://coveralls.io/r/ant-design/ant-design-colors?branch=master) [![npm package](https://img.shields.io/npm/v/@ant-design/colors.svg?style=flat-square)](https://www.npmjs.org/package/@ant-design/colors) [![NPM downloads](http://img.shields.io/npm/dm/@ant-design/colors.svg?style=flat-square)](http://npmjs.com/@ant-design/colors)
+[![CI status][github-action-image]][github-action-url]
+[![codecov][codecov-image]][codecov-url]
+[![NPM version][npm-image]][npm-url]
+[![NPM downloads][download-image]][download-url]
+[![][bundlephobia-image]][bundlephobia-url]
 
-[![Dependencies](https://img.shields.io/david/ant-design/ant-design-colors.svg?style=flat-square)](https://david-dm.org/ant-design/ant-design-colors) [![DevDependencies](https://img.shields.io/david/dev/ant-design/ant-design-colors.svg?style=flat-square)](https://david-dm.org/ant-design/ant-design-colors?type=dev) [![Greenkeeper badge](https://badges.greenkeeper.io/ant-design/ant-design-colors.svg)](https://greenkeeper.io/)
+![](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
+[npm-image]: http://img.shields.io/npm/v/@ant-design/colors.svg?style=flat-square
+[npm-url]: http://npmjs.org/package/@ant-design/colors
+[github-action-image]: https://github.com/ant-design/ant-design-colors/actions/workflows/ci.yml/badge.svg
+[github-action-url]: https://github.com/ant-design/ant-design-colors/actions/workflows/ci.yml
+[codecov-image]: https://img.shields.io/codecov/c/github/ant-design/ant-design-colors/main.svg?style=flat-square
+[codecov-url]: https://codecov.io/gh/ant-design/ant-design/branch/main
+[download-image]: https://img.shields.io/npm/dm/@ant-design/colors.svg?style=flat-square
+[download-url]: https://npmjs.org/package/@ant-design/colors
+[bundlephobia-image]: https://badgen.net/bundlephobia/minzip/@ant-design/colors?style=flat-square
+[bundlephobia-url]: https://bundlephobia.com/package/@ant-design/colors
 </div>
 
 ![](https://user-images.githubusercontent.com/507615/55726820-43e68400-5a43-11e9-8541-b0fc28b78f37.png)
