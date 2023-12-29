@@ -21,7 +21,7 @@
   ],
   "scripts": {
     "compile": "father build",
-    "coverage": "npm test -- --coverage && coveralls < coverage/lcov.info",
+    "coverage": "npm test -- --coverage",
     "lint": "eslint src --ext .ts",
     "prepublishOnly": "npm run compile && np --no-cleanup --no-publish",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
@@ -33,7 +33,6 @@
   "devDependencies": {
     "@types/jest": "^26.0.0",
     "@umijs/fabric": "^3.0.0",
-    "coveralls": "^3.1.1",
     "eslint": "^7.1.0",
     "father": "^4.1.2",
     "jest": "^26.0.1",
