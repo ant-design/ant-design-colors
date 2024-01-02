@@ -28,7 +28,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@ctrl/tinycolor": "^4.0.2"
+    "@ctrl/tinycolor": "^3.6.1"
   },
   "devDependencies": {
     "@types/jest": "^26.0.0",
