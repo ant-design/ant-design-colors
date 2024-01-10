@@ -1,3 +1,4 @@
+import tinycolor from 'tinycolor2';
 import generate from './generate';
 
 const presetPrimaryColors: Record<string, string> = {
@@ -48,8 +49,13 @@ const gray = presetPalettes.grey;
 
 export type PalettesProps = Record<string, string[] & { primary?: string }>;
 
+const isLight = (color: string): boolean => tinycolor(color).isLight();
+const isDark = (color: string): boolean => tinycolor(color).isDark();
+
 export {
   generate,
+  isLight,
+  isDark,
   presetPalettes,
   presetDarkPalettes,
   presetPrimaryColors,

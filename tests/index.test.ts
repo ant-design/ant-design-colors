@@ -1,4 +1,4 @@
-import { generate, presetPalettes } from '../src';
+import { generate, isLight, isDark, yellow, purple, presetPalettes } from '../src';
 
 export const presetBlueColors = [
   '#e6f4ff',
@@ -63,6 +63,16 @@ test('Generate dark palettes from a given color', () => {
 
 test('Generate primary color', () => {
   expect(presetPalettes.blue.primary).toEqual('#1677ff');
+});
+
+test('Determine the lightness of a color', () => {
+  expect(isLight(yellow[5])).toEqual(true);
+  expect(isLight(purple[5])).toEqual(false);
+});
+
+test('Determine the darkness of a color', () => {
+  expect(isDark(yellow[5])).toEqual(false);
+  expect(isDark(purple[5])).toEqual(true);
 });
 
 test('should contain preseted palettes', () => {
