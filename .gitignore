@@ -23,11 +23,13 @@ node_modules/
 npm-debug.log
 nohup.out
 src/**/*.js
+src/presets.ts
 tests/**/*.js
 /.vscode/
 /coverage
 yarn.lock
 package-lock.json
+pnpm-lock.yaml
 /.history
 lib
 es
