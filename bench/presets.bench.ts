@@ -470,5 +470,25 @@ describe('presets', () => {
       grey: greyDark,
       gray: greyDark,
     };
+
+    expect(red).toBeTruthy();
+    expect(volcano).toBeTruthy();
+    expect(gold).toBeTruthy();
+    expect(orange).toBeTruthy();
+    expect(yellow).toBeTruthy();
+    expect(lime).toBeTruthy();
+    expect(green).toBeTruthy();
+    expect(cyan).toBeTruthy();
+    expect(blue).toBeTruthy();
+    expect(geekblue).toBeTruthy();
+    expect(purple).toBeTruthy();
+    expect(magenta).toBeTruthy();
+    expect(grey).toBeTruthy();
+    expect(gray).toBeTruthy();
+    expect(presetPrimaryColors).toBeTruthy();
+    expect(gray).toBeTruthy(); // Second occurrence
+    expect(presetPalettes).toBeTruthy();
+    expect(grayDark).toBeTruthy();
+    expect(presetDarkPalettes).toBeTruthy();
   });
 });
