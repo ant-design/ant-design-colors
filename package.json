@@ -21,8 +21,8 @@
   ],
   "scripts": {
     "bench": "vitest bench",
-    "compile": "father build",
     "coverage": "npm test -- --coverage",
+    "compile": "father build",
     "lint": "eslint src --ext .ts",
     "prepare": "tsx generate-presets",
     "prepublishOnly": "npm run compile && np --no-cleanup --no-publish",

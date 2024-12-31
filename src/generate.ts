@@ -1,4 +1,4 @@
-import type { ColorInput } from '@ant-design/fast-color';
+import type { ColorInput} from '@ant-design/fast-color';
 import { FastColor } from '@ant-design/fast-color';
 
 const hueStep = 2; // 色相阶梯
