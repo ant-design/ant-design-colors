@@ -1,4 +1,4 @@
-import type { ColorInput} from '@ant-design/fast-color';
+import type { ColorInput } from '@ant-design/fast-color';
 import { FastColor } from '@ant-design/fast-color';
 
 const hueStep = 2; // 色相阶梯
@@ -79,14 +79,8 @@ function getValue(hsv: HsvObject, i: number, light?: boolean): number {
   } else {
     value = hsv.v - brightnessStep2 * i;
   }
-  // 边界值修正
-  if (value > 1) {
-    value = 1;
-  }
-  // 添加对负值的处理
-  if (value < 0) {
-    value = 0;
-  }
+  // Clamp value between 0 and 1
+  value = Math.max(0, Math.min(1, value));
   return Math.round(value * 100) / 100;
 }
 
