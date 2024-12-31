@@ -83,3 +83,9 @@ test('should contain preseted palettes', () => {
   ]);
   expect([...presetPalettes.blue]).toEqual(presetBlueColors);
 });
+
+test('Generate grey colors', () => {
+  // 测试灰色（h=0, s=0 的特殊情况）
+  expect(generate('#666666')).toBeTruthy();
+  expect(generate('#666666', { theme: 'dark' })).toBeTruthy();
+});
