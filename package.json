@@ -30,7 +30,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@ant-design/fast-color": "^1.1.0"
+    "@ant-design/fast-color": "^2.0.6"
   },
   "devDependencies": {
     "@ctrl/tinycolor": "^3.6.1",
