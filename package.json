@@ -25,22 +25,23 @@
     "compile": "father build",
     "lint": "eslint src --ext .ts",
     "prepare": "tsx generate-presets",
-    "prepublishOnly": "npm run compile && np --no-cleanup --no-publish",
+    "prepublishOnly": "npm run compile && rc-np",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
     "test": "jest"
   },
   "dependencies": {
-    "@ant-design/fast-color": "^2.0.6"
+    "@ant-design/fast-color": "^3.0.0"
   },
   "devDependencies": {
     "@ctrl/tinycolor": "^3.6.1",
+    "@rc-component/father-plugin": "^2.0.4",
+    "@rc-component/np": "^1.0.0",
     "@types/jest": "^26.0.24",
     "@types/node": "^20.14.9",
     "@umijs/fabric": "^3.0.0",
     "eslint": "^7.32.0",
     "father": "^4.4.4",
     "jest": "^26.6.3",
-    "np": "^7.7.0",
     "prettier": "^2.8.8",
     "ts-jest": "^26.5.6",
     "tsx": "^4.16.1",
